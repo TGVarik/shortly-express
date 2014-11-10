@@ -1,16 +1,11 @@
 <h2>Login</h2>
-<form action="/login" method="post">
-    <div>
-      <label for="username">Username:</label>
-      <input id="username" type="text" name="username">
-    </div>
-    <div>
-      <label for="password">Password:</label>
-      <input id="password" type="password" name="password">
-    </div>
-    <div>
-      <input type="submit" value="Login">
-    </div>
+<form action="/login" method="post" class="pure-form pure-form-stacked pure-skin-mine pure-g">
+    <fieldset class="pure-u-2-5">
+      <input id="username" type="text" class="pure-u-1" name="username" placeholder="username" required>
+      <input id="password" type="password" class="pure-u-1" name="password" placeholder="password" required>
+      <button id="submit" type="submit" class="pure-button pure-button-primary pure-u-1">Sign in</button>
+      <div class="error pure-u-1"><%= error %></div>
+    </fieldset>
 </form>
 <p>
   <a href="/signup">Create an Account &rarr;</a>
